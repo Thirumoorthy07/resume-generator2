@@ -1,0 +1,34 @@
+/* A4 size: 21cm x 29.7cm (794px x 1123px at 96dpi) */
+.a4-resume-preview {
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.a4-resume-preview > * {
+  box-sizing: border-box;
+  padding: 32px 40px;
+}
+
+/* Page break for print and PDF */
+.a4-resume-preview .page-break {
+  display: block;
+  height: 0;
+  page-break-after: always;
+  break-after: page;
+}
+
+@media print {
+  .a4-resume-preview {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  @page {
+    margin: 0.5cm;
+  }
+} 
